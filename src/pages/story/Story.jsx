@@ -1,8 +1,9 @@
+import Animated from "../../component/animated/Animated";
 import "./story.css";
 
 const Story = ({ page }) => {
   return (
-    <main className="story">
+    <Animated className="story">
       <section>
         <div>
           {page.map((paragraph) => (
@@ -10,7 +11,7 @@ const Story = ({ page }) => {
           ))}
         </div>
       </section>
-    </main>
+    </Animated>
   );
 };
 

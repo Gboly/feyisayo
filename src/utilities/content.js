@@ -10,6 +10,8 @@ import i9 from "../assets/9.gif";
 import i10 from "../assets/10.gif";
 import i11 from "../assets/11.gif";
 import i12 from "../assets/12.gif";
+import { animate, delay, easeIn } from "framer-motion";
+import { duration } from "@mui/material";
 
 export const loveCards = [
   {
@@ -66,6 +68,7 @@ export const page1 = [
   `The first time I saw you, I gazed into your eyes and felt something, i didn't know what it was and i didn't think much about it. You were submitting your documents to the LGI for clearance. Corper wee! 😂`,
   `The next time I saw you, you were about to board a bus in front of the lga, i was going to join but realized it was full. so, I stepped aside. For whatever reason, a passenger alighted immediately and that was my chance to get on. Heard your voice for the first time during this trip 🙂. You asked for my money to serve as change. We alighted at the junction (eko hotel).`,
   `Where we had an actual conversation 😄. I asked if you were heading to your office as the direction you were heading was the path to my own office LOL. You replied "no" and that was the beginning of our "communication". We both boarded the same bus to our separate next destination. We continued the conversation which was very natural and easy.`,
+  "...",
 ];
 
 export const page2 = [
@@ -75,3 +78,18 @@ export const page2 = [
   `Its been bliss so far. We've had a couple misunderstanding and we've been able to overcome them on the spot. I believe that's our super power.`,
   `Btw, how is a kwara man making your cheeks hurt from so much smiling? 💀`,
 ];
+
+export const initial = {
+  opacity: 1,
+  x: "100vw",
+};
+
+export const final = {
+  opacity: 1,
+  x: 0,
+};
+
+export const transition = {
+  duration: 1.5,
+  ease: easeIn,
+};

@@ -1,13 +1,12 @@
 import "./App.css";
 import Feyi from "./pages/feyi/feyi";
 import Fullscreen from "./component/fullscreen/Fullscreen";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import Love from "./pages/love/Love";
 import Story from "./pages/story/Story";
 import { page1, page2 } from "./utilities/content";
 import Note from "./pages/note/Note";
 import Question from "./pages/question/Question";
-import Final from "./pages/final/Final";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const pages = [
@@ -41,14 +40,19 @@ export const GeneralContext = createContext();
 function App() {
   const [{ src, type }, setFullscreen] = useState({ src: "", type: "" });
   const [page, setPage] = useState(1);
+  const [last, setLast] = useState(false);
 
   const next = () => setPage(page + 1);
   const back = () => setPage(page - 1);
 
+  useEffect(() => {
+    console.log(last);
+  }, [last]);
+
   return (
-    <GeneralContext.Provider value={{ setFullscreen }}>
+    <GeneralContext.Provider value={{ setFullscreen, setLast }}>
       {pages.map(({ num, comp }) => page === num && comp)}
-      {page !== 1 && (
+      {page !== 1 && !last && (
         <div className="back" onClick={back}>
           <ArrowForwardIosIcon style={{ color: "black", fontSize: "2rem" }} />
         </div>

@@ -1,10 +1,16 @@
 import "./final.css";
 import loveYou from "../../assets/love-you.png";
 import thread from "../../assets/thread-line.png";
+import { motion } from "framer-motion";
 
 const Final = () => {
   return (
-    <main className="final">
+    <motion.main
+      initial={{ width: 0, opacity: 0 }}
+      animate={{ width: "100%", opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
+      className="final"
+    >
       <section>
         <img src={loveYou} alt="" />
         <img src={thread} alt="" />
@@ -22,7 +28,7 @@ const Final = () => {
           <p>I love you.</p>
         </div>
       </section>
-    </main>
+    </motion.main>
   );
 };
 

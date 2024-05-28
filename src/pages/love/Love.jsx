@@ -1,10 +1,11 @@
+import Animated from "../../component/animated/Animated";
 import { loveCards } from "../../utilities/content";
 import "./love.css";
 import { useState } from "react";
 
 const Love = () => {
   return (
-    <main className="love">
+    <Animated className="love">
       <div>
         <h2>What do i love about you?</h2>
         <h5>
@@ -18,7 +19,7 @@ const Love = () => {
           ))}
         </section>
       </div>
-    </main>
+    </Animated>
   );
 };
 

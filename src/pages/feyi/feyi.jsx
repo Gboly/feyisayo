@@ -10,10 +10,11 @@ import feyi2 from "../../assets/feyi2.mp4";
 import feyi1 from "../../assets/feyi1.jpeg";
 import { useContext } from "react";
 import { GeneralContext } from "../../App";
+import Animated from "../../component/animated/Animated";
 
 const Feyi = () => {
   return (
-    <main className="feyi">
+    <Animated className="feyi">
       <div className="first">
         <Image src={feyi1} />
       </div>
@@ -33,7 +34,7 @@ const Feyi = () => {
       <div className="last">
         <Image src={feyi5} />
       </div>
-    </main>
+    </Animated>
   );
 };
 
