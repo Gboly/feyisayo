@@ -40,7 +40,7 @@ const pages = [
 export const GeneralContext = createContext();
 function App() {
   const [{ src, type }, setFullscreen] = useState({ src: "", type: "" });
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(1);
 
   const next = () => setPage(page + 1);
   const back = () => setPage(page - 1);
