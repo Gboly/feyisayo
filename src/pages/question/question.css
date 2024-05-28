@@ -1,0 +1,34 @@
+.question {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/shiningStars.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.question div {
+    display: flex;
+    gap: 1.5rem;
+    width: 30rem;
+}
+.question div button:first-of-type {
+    flex: 30%;
+}
+.question div button:last-of-type {
+    flex: calc(70% - 1.5rem);
+    cursor: pointer;
+    border: 2px solid gray;
+    background-color: transparent;
+}
+.question div button:last-of-type:hover {
+    background-color: rgba(121,121,121, 0.7);
+}
+.question div button {
+    height: 3rem;
+    font-size: 1.1rem;
+}

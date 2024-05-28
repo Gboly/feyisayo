@@ -1,0 +1,69 @@
+.love {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.love > div {
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.love h2 {
+    font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  margin: 0;
+}
+.love h5 {
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.cards-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.card {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.3);
+    background-color: #5271ff;
+    flex: calc(25% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.015);
+    opacity: 0.9;
+}
+.card img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.card p {
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    font-family: "Hammersmith One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2rem;
+}
